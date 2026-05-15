@@ -17,7 +17,7 @@ fetal movements, daily nutrition, upcoming check-up dates, and danger signs
 
 ## ✨ Features
 
-### 👶 Kick Counter
+## 👶 Kick Counter
 - Large single tap button to record fetal movements
 - Debounce protection (500ms) to prevent double counting
 - Timestamped kick events stored in local Room DB
