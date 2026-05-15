@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Matru-Sneh Health</string>
+    <string name="notification_channel_appointment">Appointment Reminders</string>
+    <string name="notification_channel_nutrition">Nutrition Reminders</string>
+</resources>
