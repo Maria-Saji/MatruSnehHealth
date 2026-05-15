@@ -1,0 +1,31 @@
+# ⚙️ Project Run Requirements — Matru-Sneh Health
+
+## 🖥️ Development Environment
+
+| Requirement | Details |
+|---|---|
+| Operating System | Windows 10/11, macOS, or Linux |
+| Android Studio Version | Android Studio Hedgehog (2023.1.1) or newer |
+| JDK Version | Java 17 (bundled with Android Studio) |
+| Kotlin Version | 1.9.0 or newer |
+| Gradle Version | 8.0 or newer |
+
+---
+
+## 📱 Device Requirements
+
+| Requirement | Details |
+|---|---|
+| Minimum SDK | Android 8.0 (API Level 26) |
+| Target SDK | Android 14 (API Level 34) |
+| RAM | Minimum 2GB recommended |
+| Storage | Minimum 50MB free space |
+| Internet | Not required (fully offline) |
+
+---
+
+## 📦 Dependencies
+
+Add the following in your `build.gradle (app)` file:
+
+```gradle
