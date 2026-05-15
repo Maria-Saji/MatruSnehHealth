@@ -1,4 +1,5 @@
-# 🤱 Matru-Sneh Health
+# 🤱 Matru-Sneh Health (## APK Testing
+The APK was tested successfully on Android devices running Android 10+.)
 ### Pocket Pregnancy Guide for Rural Mothers
 
 An offline-first Android app designed to support rural expectant mothers 
