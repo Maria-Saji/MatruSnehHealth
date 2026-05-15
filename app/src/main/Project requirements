@@ -29,3 +29,129 @@
 Add the following in your `build.gradle (app)` file:
 
 ```gradle
+dependencies {
+
+    // ─── Kotlin ───────────────────────────────────────
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.9.0"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3"
+
+    // ─── AndroidX Core ────────────────────────────────
+    implementation "androidx.core:core-ktx:1.12.0"
+    implementation "androidx.appcompat:appcompat:1.6.1"
+    implementation "com.google.android.material:material:1.11.0"
+
+    // ─── Lifecycle & ViewModel ────────────────────────
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.7.0"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.7.0"
+
+    // ─── Room Database ────────────────────────────────
+    implementation "androidx.room:room-runtime:2.6.1"
+    implementation "androidx.room:room-ktx:2.6.1"
+    kapt "androidx.room:room-compiler:2.6.1"
+
+    // ─── WorkManager ──────────────────────────────────
+    implementation "androidx.work:work-runtime-ktx:2.9.0"
+
+    // ─── Navigation Component ─────────────────────────
+    implementation "androidx.navigation:navigation-fragment-ktx:2.7.6"
+    implementation "androidx.navigation:navigation-ui-ktx:2.7.6"
+
+    // ─── Jetpack Compose (if using Compose UI) ────────
+    implementation "androidx.compose.ui:ui:1.5.4"
+    implementation "androidx.compose.material3:material3:1.1.2"
+    implementation "androidx.compose.ui:ui-tooling-preview:1.5.4"
+    implementation "androidx.activity:activity-compose:1.8.2"
+
+    // ─── Hilt (Dependency Injection) ──────────────────
+    implementation "com.google.dagger:hilt-android:2.48"
+    kapt "com.google.dagger:hilt-compiler:2.48"
+
+    // ─── Testing ──────────────────────────────────────
+    testImplementation "junit:junit:4.13.2"
+    androidTestImplementation "androidx.test.ext:junit:1.1.5"
+    androidTestImplementation "androidx.room:room-testing:2.6.1"
+    androidTestImplementation "androidx.work:work-testing:2.9.0"
+}
+```
+
+---
+
+## 🔧 Plugins Required
+
+Add in `build.gradle (app)`:
+
+```gradle
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
+}
+```
+
+Add in `build.gradle (project)`:
+
+```gradle
+plugins {
+    id 'com.android.application' version '8.1.0' apply false
+    id 'org.jetbrains.kotlin.android' version '1.9.0' apply false
+    id 'com.google.dagger.hilt.android' version '2.48' apply false
+}
+```
+
+---
+
+## 🚀 Steps to Run the Project
+
+1. **Clone the repository**
+git clone https://github.com/YourUsername/Matru-Sneh-Health.git
+
+2. **Open in Android Studio**
+   - File → Open → Select the cloned project folder
+
+3. **Sync Gradle**
+   - Click "Sync Now" when prompted
+   - Or go to File → Sync Project with Gradle Files
+
+4. **Set up Emulator or Device**
+   - Emulator: AVD Manager → Create Virtual Device → API 26+
+   - Physical Device: Enable USB Debugging in Developer Options
+
+5. **Build the Project**
+   - Build → Make Project (Ctrl + F9)
+
+6. **Run the App**
+   - Run → Run 'app' (Shift + F10)
+   - Select your emulator or connected device
+
+---
+
+## ⚠️ Common Issues & Fixes
+
+| Issue | Fix |
+|---|---|
+| Gradle sync failed | File → Invalidate Caches → Restart |
+| Kapt error | Ensure JDK 17 is set in Project Structure |
+| WorkManager not firing | Disable battery optimization for the app |
+| Room DB crash on reboot | Check if all DAOs are properly annotated |
+| Emulator slow | Enable Hardware Acceleration (HAXM/AMD Hypervisor) |
+
+---
+
+## 📋 Permissions Required
+
+Add in `AndroidManifest.xml`:
+
+```xml
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+<uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+<uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+```
+
+---
+
+## 🌐 Internet Requirement
+**None.** This app is fully offline. All data is stored locally 
+in Room DB (SQLite). No API keys or network configuration needed.
